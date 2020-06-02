@@ -10,6 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>nacos-service-two</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>service-api</module>
+        <module>service-feign</module>
+    </modules>
 
 
     <properties>
@@ -17,6 +22,7 @@
         <zipkin.version>2.11.9</zipkin.version>
         <!-- nacos 2.2 版本以上有问题 -->
         <nacos.version>2.1.1.RELEASE</nacos.version>
+        <spring.cloud.alibaba>2.1.1.RELEASE</spring.cloud.alibaba>
     </properties>
 
     <dependencies>
@@ -55,6 +61,18 @@
                     <artifactId>nacos-client</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!-- sentinel -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <version>${spring.cloud.alibaba}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
         <!-- 需要升级 Nacos 客户端时，只需要如下修改依赖 -->

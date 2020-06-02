@@ -89,5 +89,12 @@
             <version>1.2.54</version>
         </dependency>
 
+        <!-- feign -->
+        <dependency>
+            <artifactId>service-feign</artifactId>
+            <groupId>com.cloud.demo</groupId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 </project>
