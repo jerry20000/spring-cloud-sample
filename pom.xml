@@ -16,11 +16,52 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+
+        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+        <zipkin.version>2.11.9</zipkin.version>
+        <!-- nacos 2.2 版本以上有问题 -->
+        <nacos.version>2.1.1.RELEASE</nacos.version>
     </properties>
 
     <modules>
         <module>slf4j-mdc</module>
         <module>elk</module>
+        <module>nacos-service-one</module>
+        <module>nacos-service-two</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>0.2.2.RELEASE</version>
+                <!-- <version>0.9.0.RELEASE</version>-->
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
