@@ -28,6 +28,7 @@
         <module>elk</module>
         <module>nacos-service-one</module>
         <module>nacos-service-two</module>
+        <module>nacos-gateway-config</module>
     </modules>
 
     <dependencies>
@@ -63,5 +64,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>

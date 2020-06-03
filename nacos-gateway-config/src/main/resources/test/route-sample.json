@@ -1,0 +1,21 @@
+[{
+  "id": "nacos-service-one",
+  "order": 0,
+  "predicates": [{
+    "args": {
+      "pattern": "/service-one/**"
+    },
+    "name": "Path"
+  }],
+  "uri": "lb://nacos-service-one"
+},{
+  "id": "nacos-service-two",
+  "order": 2,
+  "predicates": [{
+    "args": {
+      "pattern": "/service-two/**"
+    },
+    "name": "Path"
+  }],
+  "uri": "lb://nacos-service-two"
+}]

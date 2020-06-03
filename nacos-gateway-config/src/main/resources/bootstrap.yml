@@ -1,0 +1,29 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: nacos-gateway-config
+  cloud:
+    nacos:
+      discovery:
+        namespace: 0addce0b-2270-4660-bff5-cc9adcf44abe
+        server-addr: 192.168.136.128:8848
+    gateway:
+      discovery:
+        locator:
+          # 路径转小写
+          lower-case-service-id: true
+
+# 自定义
+gateway:
+  config:
+    namespace: 0addce0b-2270-4660-bff5-cc9adcf44abe
+    server-addr: 192.168.136.128:8848
+    data-id: ${spring.application.name}-gateway
+    group-id: DEFAULT_GROUP
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
