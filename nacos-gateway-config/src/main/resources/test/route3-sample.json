@@ -7,7 +7,7 @@
         {
           "name": "Path",
           "args": {
-            "pattern": "/service-one/**"
+            "pattern": "/serviceOne/**"
           }
         }
       ],
@@ -23,7 +23,7 @@
         {
           "name": "Path",
           "args": {
-            "pattern": "/service-two/**"
+            "pattern": "/serviceTwo/**"
           }
         }
       ],
