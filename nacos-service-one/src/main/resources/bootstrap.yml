@@ -12,10 +12,21 @@ spring:
       discovery:
         namespace: 0addce0b-2270-4660-bff5-cc9adcf44abe
         server-addr: 192.168.136.128:8848
+
     sentinel:
       transport:
         port: 18700
         dashboard: 192.168.136.128:8080
+      # 流控规则持久化到nacos，防止应用重启后sentinel重置
+      datasource:
+        dsl:
+          nacos:
+            namespace: 0addce0b-2270-4660-bff5-cc9adcf44abe
+            server-addr: 192.168.136.128:8848
+            data-id: ${spring.application.name}-sentinel
+            group-id: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
 
 feign:
   sentinel:
