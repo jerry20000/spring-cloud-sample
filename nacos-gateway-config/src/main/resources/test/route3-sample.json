@@ -12,7 +12,12 @@
         }
       ],
       "filters": [
-
+        {
+          "name": "StripPrefix",
+          "args": {
+            "_genkey_0": "1"
+          }
+        }
       ],
       "uri": "lb://nacos-service-one",
       "order": 0
@@ -28,10 +33,30 @@
         }
       ],
       "filters": [
-
+        {
+          "name": "StripPrefix",
+          "args": {
+            "_genkey_0": "1"
+          }
+        }
       ],
       "uri": "lb://nacos-service-two",
       "order": 1
+    },
+    {
+      "id": "nacos-service-test",
+      "predicates": [
+        {
+          "name": "Path",
+          "args": {
+            "pattern": "/testWeb33"
+          }
+        }
+      ],
+      "filters": [
+      ],
+      "uri": "http://www.163.com/",
+      "order": 3
     }
   ]
 }
