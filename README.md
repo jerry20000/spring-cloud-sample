@@ -19,8 +19,10 @@
    
    项目介绍：
    #nacos-gateway-config: springcloud gateway动态路由，集成nacos配置
-   #nacos-service-one：nacos微服务应用，集成nacos配置，sentinel服务降级；feignclient标准调用消费方
+   #nacos-service-one：nacos微服务应用，集成nacos配置，sentinel服务降级；feignclient标准调用消费方；流控规则持久化到nacos
    #nacos-service-two：nacos微服务应用，集成nacos配置，sentinel服务降级；feignclient标准调用提供方，封装feign提供方接口
    #elk: logstash + elasticsearch + kibana 日志收集demo
    #slf4-mdc: 日志链路跟踪，需要的模块引入该jar包即可，日志自动收集到logstash
+            
+            
             
