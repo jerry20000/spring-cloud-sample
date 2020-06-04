@@ -5,10 +5,10 @@ spring:
     name: nacos-gateway-config
   cloud:
     nacos:
-#      config:
-#        namespace: 0addce0b-2270-4660-bff5-cc9adcf44abe
-#        server-addr: 192.168.136.128:8848
-#        file-extension: json
+      config:
+        namespace: 0addce0b-2270-4660-bff5-cc9adcf44abe
+        server-addr: 192.168.136.128:8848
+        file-extension: json
       discovery:
         namespace: 0addce0b-2270-4660-bff5-cc9adcf44abe
         server-addr: 192.168.136.128:8848
